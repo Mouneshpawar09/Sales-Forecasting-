@@ -5,8 +5,8 @@ from sklearn.preprocessing import StandardScaler
 from xgboost import XGBRegressor
 
 def retrain_model(
-    new_data_path=r"./sales_data.csv", 
-    old_data_path=r"./2.csv"
+    new_data_path="data/new_sales_data.csv", 
+    old_data_path="data/2.csv"
 ):
     old_df = pd.read_csv(old_data_path)
     new_df = pd.read_csv(new_data_path)
