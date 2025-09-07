@@ -7,6 +7,7 @@ from predict import predict_units_sold
 st.set_page_config(page_title="Sales Forecasting", layout="centered")
 st.title("🛒 Sales Forecasting & Inventory Planner")
 
+os.makedirs("data", exist_ok=True)
 st.header("📤 Upload New Sales Data (CSV)")
 uploaded_file = st.file_uploader("Choose a CSV file with new sales data", type="csv")
 
@@ -45,3 +46,4 @@ with st.form("predict_form"):
         }
         prediction = predict_units_sold(input_data)
         st.success(f"📦 Predicted Units Sold: **{prediction}**")
+
