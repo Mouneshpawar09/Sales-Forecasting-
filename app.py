@@ -1,4 +1,4 @@
-# app.py
+import os
 import streamlit as st
 import pandas as pd
 from retrain import retrain_model
@@ -46,4 +46,5 @@ with st.form("predict_form"):
         }
         prediction = predict_units_sold(input_data)
         st.success(f"📦 Predicted Units Sold: **{prediction}**")
+
 
